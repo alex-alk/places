@@ -124,6 +124,18 @@
             "./src/Kernel.php"
         ]
     },
+    "symfony/mailer": {
+        "version": "6.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.3",
+            "ref": "97a61eabb351d7f6cb7702039bcfe07fe9d7e03c"
+        },
+        "files": [
+            "./config/packages/mailer.yaml"
+        ]
+    },
     "symfony/maker-bundle": {
         "version": "1.47",
         "recipe": {
@@ -181,6 +193,15 @@
         "files": [
             "./config/packages/security.yaml"
         ]
+    },
+    "symfony/slack-notifier": {
+        "version": "6.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "5.2",
+            "ref": "192bc241a3095c6861353e5a7a652ad35659ca92"
+        }
     },
     "symfony/translation": {
         "version": "6.1",
@@ -250,6 +271,18 @@
             "./config/packages/webpack_encore.yaml",
             "./package.json",
             "./webpack.config.js"
+        ]
+    },
+    "symfony/workflow": {
+        "version": "6.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.3",
+            "ref": "3b2f8ca32a07fcb00f899649053943fa3d8bbfb6"
+        },
+        "files": [
+            "./config/packages/workflow.yaml"
         ]
     },
     "twig/extra-bundle": {

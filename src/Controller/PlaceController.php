@@ -90,6 +90,7 @@ class PlaceController extends AbstractController
             ];
 
             $reviewUrl = $this->generateUrl('review_comment', ['id' => $comment->getId()], UrlGeneratorInterface::ABSOLUTE_URL);
+
             $this->bus->dispatch(new CommentMessage($comment->getId(), $reviewUrl, $context));
 
             $notifier->send(new Notification('Thank you for the feedback; your comment will be posted after moderation.', ['browser']));
