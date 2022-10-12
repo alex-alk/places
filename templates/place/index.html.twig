@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Places to visit in Romania{% endblock %}
+
+{% block body %}
+    <h2 class="mb-5">
+        {{ 'Give your feedback!'|trans }}
+    </h2>
+
+    {% for row in places|batch(4) %}
+        <div class="row">
+            {% for place in row %}
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card border shadow lift">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 class="font-weight-light">
+                                    {{ place }}
+                                </h4>
+                            </div>
+
+                            <a href="{{ path('place', { slug: place.slug }) }}"
+                               class="btn btn-sm btn-primary stretched-link">
+                                {{ 'View'|trans }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -53,7 +53,7 @@ class CommentRepository extends ServiceEntityRepository
     {
         $query = $this->createQueryBuilder('c')
             ->andWhere('c.place = :place')
-            ->andWhere('c.place = :place')
+            ->andWhere('c.state = :state')
             ->setParameter('place', $place)
             ->setParameter('state', 'published')
             ->orderBy('c.createdAt', 'DESC')

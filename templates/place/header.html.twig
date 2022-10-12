@@ -1,0 +1,5 @@
+{% for place in places %}
+    <a class="nav-place" href="{{ path('place', { slug: place.slug }) }}">
+        {{ place }}
+    </a>
+{% endfor %}
